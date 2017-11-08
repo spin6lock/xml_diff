@@ -1,5 +1,13 @@
 #! /usr/bin/env lua
 
+--1. git config diff.xml_diff.textconv xml_diff.lua
+---- file: .git/config 
+---- [diff "xml_diff"] 
+----     textconv = xml_diff.lua
+
+--2. file: .gitattributes] 
+---- *.xml diff=xml_diff
+
  local args = {...}
  local filepath = args[1]
  local txt = io.open(filepath, "r"):read("*a")
