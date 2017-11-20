@@ -8,6 +8,8 @@
 --2. file: .gitattributes] 
 ---- *.xml diff=xml_diff
 
+--3. file: chmod u+x xml_diff.lua
+
  local args = {...}
  local filepath = args[1]
  local txt = io.open(filepath, "r"):read("*a")
